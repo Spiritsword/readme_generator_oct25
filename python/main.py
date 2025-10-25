@@ -1,23 +1,21 @@
-from InquirerPy import prompt
+from InquirerPy import inquirer
+from InquirerPy.validator import EmptyInputValidator
+from InquirerPy.base.control import Choice
 
-questions = [
-    {"type": "input", "message": "What's your name:", "name": "name"},
-    {
-        "type": "list",
-        "message": "What's your favourite programming language:",
-        "choices": ["Go", "Python", "Rust", "JavaScript"],
-    },
-    {"type": "confirm", "message": "Confirm?"},
-]
+def main() -> None:
 
-def intake (questions):
-    result = prompt(questions)
-    name = result["name"]
-    fav_lang = result[1]
-    confirm = result[2]
-    if confirm == False:
-        intake (questions)
-    print(name)
-    print(fav_lang)
-    print(confirm)
+    title = inquirer.text(message="Enter project title:").execute()
+    description = inquirer.text(message="Enter project description:").execute()
+    installation_instructions = inquirer.text(message="Enter installation instructions:").execute()
+    usage_information = inquirer.text(message="Enter usage information:").execute()
+    licence = inquirer.select(message="Select a licence:",
+        choices=[
+            Choice("Open"),
+            Choice("Closed"),
+        ],
+        multiselect=False                             
+        ).execute()
+    print(title)
 
+if __name__ == "__main__":
+    main()
