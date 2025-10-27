@@ -22,7 +22,7 @@ def make_string_para(para):
     return f'{para} '
 
 def make_string_title(title):
-    return f'## {title} <br/><br/>'
+    return f'# {title} \n'
 
 def make_string_description(description):
     return make_string_para(description)
@@ -37,7 +37,7 @@ def make_string_licence(description):
     return make_string_base_section("Licence", description)
 
 def make_string_author(first_name, last_name):
-    return f'## "Author" <br/><br/> {first_name} {last_name}  <br/><br/>'
+    return f'## "Author" \n {first_name} {last_name} \n'
 
 def make_string_email_address(email):
     return make_string_base_section("Email Address", email)
