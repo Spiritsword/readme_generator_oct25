@@ -46,6 +46,6 @@ def make_string_telephone_number(tel):
     return make_string_base_section("Telephone Number", tel)
 
 def make_string_linkedin_url(url):
-    link = f'["Profile link"] ({url})'
+    link = f'[Profile link]({url})'
     return make_string_base_section("LinkedIn Profile", link)
 
