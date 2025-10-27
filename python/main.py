@@ -1,20 +1,20 @@
 from InquirerPy import inquirer
 from InquirerPy.validator import EmptyInputValidator, NumberValidator
 from InquirerPy.base.control import Choice
-import re
-import readme_generation
+from readme_generation import create_readme
 
 class ReadmeContent:
-  def __init__(self, title="", description="", installation_instructions="", usage_information="", licence="Proprietary", author_first_name="", author_last_name="", email_address="@", telephone_number="0")
+  def __init__(self, title="", description="", installation_instructions="", usage_information="", licence="Proprietary", author_first_name="", author_last_name="", email_address="@", telephone_number="0", linked_in_url=""):
     self.title = title
     self.description = description
-    self.installation_instructions = 
+    self.installation_instructions = installation_instructions
     self.usage_information = usage_information
     self.licence = licence
     self.author_first_name = author_first_name
     self.author_last_name = author_last_name
     self.email_address = email_address
     self.telephone_number = telephone_number
+    self.linked_in_url = linked_in_url
 
 def main() -> None:
 
@@ -42,7 +42,8 @@ def main() -> None:
 
 if __name__ == "__main__":
     new_readme_content = main()
-    readme_markdown = readme_generation.create_readme(new_readme_content)
+    readme_markdown = create_readme(new_readme_content)
+    print(readme_markdown)
     
 
 
