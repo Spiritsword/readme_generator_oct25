@@ -12,5 +12,5 @@ s ## Installation Instructions
  ## Telephone Number 
  123 
  ## LinkedIn Profile 
- ["Profile link"] (h/j.com) 
+ ([Profile link](https://pages.github.com/)) 
  

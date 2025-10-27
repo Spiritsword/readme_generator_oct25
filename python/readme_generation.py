@@ -37,7 +37,7 @@ def make_string_licence(description):
     return make_string_base_section("Licence", description)
 
 def make_string_author(first_name, last_name):
-    return f'## "Author" \n {first_name} {last_name} \n'
+    return f'## Author \n {first_name} {last_name} \n'
 
 def make_string_email_address(email):
     return make_string_base_section("Email Address", email)
