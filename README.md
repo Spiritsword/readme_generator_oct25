@@ -5,12 +5,12 @@ s ## Installation Instructions
  f 
  ## Licence 
  Open Source 
- ## "Author" 
- g h 
+ ## Author 
+ a s 
 ## Email Address 
- j@k 
+ da@d 
  ## Telephone Number 
  123 
  ## LinkedIn Profile 
- ([Profile link](https://pages.github.com/)) 
+ ["Profile link"] (https://docs.github.com/) 
  
