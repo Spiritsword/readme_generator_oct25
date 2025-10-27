@@ -14,7 +14,9 @@ def create_readme(readme_content):
     return final_string
     
 def make_string_base_section(title, description):
-    return_string = f'## {title} <br/><br/> {description} <br/><br/> '
+    return_string = f'## {title}  
+    {description}  
+    '
     print(return_string)
     return return_string
 
