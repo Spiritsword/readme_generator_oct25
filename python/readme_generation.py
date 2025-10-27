@@ -1,7 +1,5 @@
 def create_readme(readme_content):
-    main_title = "# README  "
-    content_tuple = (main_title,
-                    make_string_title(readme_content.title),
+    content_tuple = (make_string_title(readme_content.title),
                     make_string_description(readme_content.description),
                     make_string_installation_instructions(readme_content.installation_instructions),
                     make_string_usage_information(readme_content.usage_information),
@@ -16,7 +14,7 @@ def create_readme(readme_content):
     return final_string
     
 def make_string_base_section(title, description):
-    return_string = f'## {title}  {description}  '
+    return_string = f'## {title}<\br><\br>{description}'
     print(return_string)
     return return_string
 
@@ -48,5 +46,6 @@ def make_string_telephone_number(tel):
     return make_string_base_section("Telephone Number", tel)
 
 def make_string_linkedin_url(url):
-    return make_string_base_section("LinkedIn Profile", url)
+    link = f'["Profile link"] ({url})'
+    return make_string_base_section("LinkedIn Profile", link)
 
