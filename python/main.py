@@ -18,7 +18,7 @@ def main() -> None:
         ).execute()
     author_first_name = inquirer.text(message="Enter your first name:", validate = EmptyInputValidator(), invalid_message = "First name cannot be empty.").execute()
     author_last_name = inquirer.text(message="Enter your last name:", validate = EmptyInputValidator(), invalid_message = "Last name cannot be empty.").execute()
-    email = inquirer.text(message="Enter your email address:", validate=(lambda text: re.fullmatch("*@*", text)), invalid_message="Please enter a valid email address.").execute()
+    email = inquirer.text(message="Enter your email address:", validate=(lambda text: (True if "@" in text else False)), invalid_message="Please enter a valid email address.").execute()
     tel = inquirer.text(message="Enter your telephone number:", validate=NumberValidator(float_allowed = False), invalid_message = "Please input an integer without spaces.").execute()
     LinkedIn = inquirer.text(message="Enter your LinkedIn url:").execute()
 
