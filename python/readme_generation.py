@@ -14,15 +14,15 @@ def create_readme(readme_content):
     return final_string
     
 def make_string_base_section(title, description):
-    return_string = f'## {title} <br /><br /> {description}'
+    return_string = f'## {title} <br/><br/> {description} <br/><br/> '
     print(return_string)
     return return_string
 
 def make_string_para(para):
-    return f'{para}  '
+    return f'{para} <br/><br/>'
 
 def make_string_title(title):
-    return f'## {title}  '
+    return f'## {title} <br/><br/>'
 
 def make_string_description(description):
     return make_string_para(description)
@@ -37,7 +37,7 @@ def make_string_licence(description):
     return make_string_base_section("Licence", description)
 
 def make_string_author(first_name, last_name):
-    return f'## "Author"  {first_name} {last_name}  '
+    return f'## "Author" <br/><br/> {first_name} {last_name}  <br/><br/>'
 
 def make_string_email_address(email):
     return make_string_base_section("Email Address", email)
