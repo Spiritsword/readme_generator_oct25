@@ -1,3 +1,7 @@
+from InquirerPy import inquirer
+from InquirerPy.validator import EmptyInputValidator, NumberValidator
+from InquirerPy.base.control import Choice
+
 class ReadmeContent:
   def __init__(self, title="", description="", installation_instructions="", usage_information="", licence="Proprietary", author_first_name="", author_last_name="", email_address="@", telephone_number="0", linkedin_url=""):
     self.title = title

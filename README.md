@@ -1,2 +1,1 @@
-# readme_generator_oct25
-Generates a professional readme file for a repository, from user input
+# README  ## Readme Generator  This is a program, written in Python  ## Installation Instructions  Install requirements.txt  ## Usage Information  Can be used on any program or repo  ## Licence  Proprietary  ## "Author"  Jon Pud  ## Email Address  jon@pud.com  ## Telephone Number  123451234512  ## LinkedIn Profile  linkedin/jonpud  
