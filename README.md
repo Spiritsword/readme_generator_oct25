@@ -1,1 +1,1 @@
-## f  g  ## Installation Instructions<r><r>h## Usage Information<r><r>j## Licence<r><r>Open Source## "Author"  a s  ## Email Address<r><r>d@e## Telephone Number<r><r>123## LinkedIn Profile<r><r>["Profile link"] (e/g.com)
+## a  s  ## Installation Instructions <br /><br /> d## Usage Information <br /><br /> f## Licence <br /><br /> Open Source## "Author"  g h  ## Email Address <br /><br /> j@## Telephone Number <br /><br /> 123## LinkedIn Profile <br /><br /> ["Profile link"] (as)
