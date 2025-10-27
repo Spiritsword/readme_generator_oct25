@@ -1,16 +1,16 @@
 def create_readme(readme_content):
-    str[0] = make_string_title(readme_content.title)
-    str[1] = make_string_description(readme_content.description)
-    str[2] = make_string_installation_instructions(readme_content.installation_instructions)
-    str[3] = make_string_usage_information(readme_content.usage_information)
-    str[4] = make_string_licence(readme_content.licence)
-    str[5] = make_string_author(readme_content.author_first_name, readme_content.author_last_name)
-    str[7] = make_string_email_address(readme_content.email_address)
-    str[8] = make_string_linkedin_url(readme_content.linkedin_url)
-    final_str = 0
-    for i in range(9):
-        final_str.append(str[i])
-    return final_str
+    content_tuple = (make_string_title(readme_content.title),
+                     make_string_description(readme_content.description),
+                     make_string_installation_instructions(readme_content.installation_instructions),
+                     make_string_usage_information(readme_content.usage_information),
+                     make_string_licence(readme_content.licence),
+                     make_string_author(readme_content.author_first_name, readme_content.author_last_name),
+                     make_string_email_address(readme_content.email_address),
+                     make_string_linkedin_url(readme_content.linkedin_url)
+                    )
+    final_string = "".join(content_tuple)
+    print(final_string)
+    return final_string
     
 def make_string_base_section(title, description):
     return f'## {title}  {description}  '
@@ -41,3 +41,4 @@ def make_string_email_address(email):
 
 def make_string_linkedin_url(url):
     make_string_base_section("LinkedIn Profile", {url})
+

@@ -4,7 +4,7 @@ from InquirerPy.base.control import Choice
 from readme_generation import create_readme
 
 class ReadmeContent:
-  def __init__(self, title="", description="", installation_instructions="", usage_information="", licence="Proprietary", author_first_name="", author_last_name="", email_address="@", telephone_number="0", linked_in_url=""):
+  def __init__(self, title="", description="", installation_instructions="", usage_information="", licence="Proprietary", author_first_name="", author_last_name="", email_address="@", telephone_number="0", linkedin_url=""):
     self.title = title
     self.description = description
     self.installation_instructions = installation_instructions
@@ -14,7 +14,7 @@ class ReadmeContent:
     self.author_last_name = author_last_name
     self.email_address = email_address
     self.telephone_number = telephone_number
-    self.linked_in_url = linked_in_url
+    self.linkedin_url = linkedin_url
 
 def main() -> None:
 
