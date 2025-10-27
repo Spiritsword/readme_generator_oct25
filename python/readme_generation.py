@@ -6,6 +6,7 @@ def create_readme(readme_content):
                      str(make_string_licence(readme_content.licence)),
                      str(make_string_author(readme_content.author_first_name, readme_content.author_last_name)),
                      str(make_string_email_address(readme_content.email_address)),
+                     str(make_string_telephone_number(readme_content.telephone_number)),
                      str(make_string_linkedin_url(readme_content.linkedin_url))
                     )
     final_string = "".join(content_tuple)
@@ -13,7 +14,9 @@ def create_readme(readme_content):
     return final_string
     
 def make_string_base_section(title, description):
-    return f'## {title}  {description}  '
+    return_string = f'## {title}  {description}  '
+    print(return_string)
+    return return_string
 
 def make_string_para(para):
     return f'{para}  '
@@ -22,23 +25,26 @@ def make_string_title(title):
     return f'## {title}  '
 
 def make_string_description(description):
-    make_string_para(description)
+    return make_string_para(description)
 
 def make_string_installation_instructions(description):
-    make_string_base_section("Installation Instructions", description)
+    return make_string_base_section("Installation Instructions", description)
 
 def make_string_usage_information(description):
-    make_string_base_section("Usage Information", description)
+    return make_string_base_section("Usage Information", description)
 
 def make_string_licence(description):
-    make_string_base_section("Licence", description)
+    return make_string_base_section("Licence", description)
 
 def make_string_author(first_name, last_name):
     return f'## "Author"  {first_name} {last_name}  '
 
 def make_string_email_address(email):
-    make_string_base_section("Email Address", {email})
+    return make_string_base_section("Email Address", email)
+
+def make_string_telephone_number(tel):
+    return make_string_base_section("Telephone Number", tel)
 
 def make_string_linkedin_url(url):
-    make_string_base_section("LinkedIn Profile", {url})
+    return make_string_base_section("LinkedIn Profile", url)
 

@@ -16,8 +16,7 @@ class ReadmeContent:
     self.telephone_number = telephone_number
     self.linkedin_url = linkedin_url
 
-def main() -> None:
-
+def main():
     title = inquirer.text(message="Enter project title:").execute()
     description = inquirer.text(message="Enter project description:").execute()
     installation_instructions = inquirer.text(message="Enter installation instructions:").execute()
@@ -34,11 +33,11 @@ def main() -> None:
     author_last_name = inquirer.text(message="Enter your last name:", validate = EmptyInputValidator(), invalid_message = "Last name cannot be empty.").execute()
     email_address = inquirer.text(message="Enter your email address:", validate=(lambda text: (True if "@" in text else False)), invalid_message="Please enter a valid email address.").execute()
     telephone_number = inquirer.text(message="Enter your telephone number:", validate=NumberValidator(float_allowed = False), invalid_message = "Please input an integer without spaces.").execute()
-    LinkedIn_url = inquirer.text(message="Enter your LinkedIn url:").execute()
+    linkedin_url = inquirer.text(message="Enter your LinkedIn url:").execute()
 
     print(title)
 
-    return ReadmeContent(title, description, installation_instructions, usage_information, licence, author_first_name, author_last_name, email_address, telephone_number)
+    return ReadmeContent(title, description, installation_instructions, usage_information, licence, author_first_name, author_last_name, email_address, telephone_number, linkedin_url)
 
 if __name__ == "__main__":
     new_readme_content = main()
