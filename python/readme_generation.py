@@ -14,14 +14,12 @@ def create_readme(readme_content):
     return final_string
     
 def make_string_base_section(title, description):
-    return_string = f'## {title}  
-    {description}  
-    '
+    return_string = f'## {title} \n {description} \n '
     print(return_string)
     return return_string
 
 def make_string_para(para):
-    return f'{para} <br/><br/>'
+    return f'{para} '
 
 def make_string_title(title):
     return f'## {title} <br/><br/>'
