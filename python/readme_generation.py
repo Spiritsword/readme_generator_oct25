@@ -1,5 +1,7 @@
 def create_readme(readme_content):
-    content_tuple = (make_string_title(readme_content.title),
+    main_title = "# README  "
+    content_tuple = (main_title,
+                    make_string_title(readme_content.title),
                     make_string_description(readme_content.description),
                     make_string_installation_instructions(readme_content.installation_instructions),
                     make_string_usage_information(readme_content.usage_information),
