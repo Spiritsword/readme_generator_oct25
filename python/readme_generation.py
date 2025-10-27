@@ -1,13 +1,13 @@
 def create_readme(readme_content):
-    content_tuple = (str(make_string_title(readme_content.title)),
-                     str(make_string_description(readme_content.description)),
-                     str(make_string_installation_instructions(readme_content.installation_instructions)),
-                     str(make_string_usage_information(readme_content.usage_information)),
-                     str(make_string_licence(readme_content.licence)),
-                     str(make_string_author(readme_content.author_first_name, readme_content.author_last_name)),
-                     str(make_string_email_address(readme_content.email_address)),
-                     str(make_string_telephone_number(readme_content.telephone_number)),
-                     str(make_string_linkedin_url(readme_content.linkedin_url))
+    content_tuple = (make_string_title(readme_content.title),
+                    make_string_description(readme_content.description),
+                    make_string_installation_instructions(readme_content.installation_instructions),
+                    make_string_usage_information(readme_content.usage_information),
+                    make_string_licence(readme_content.licence),
+                    make_string_author(readme_content.author_first_name, readme_content.author_last_name),
+                    make_string_email_address(readme_content.email_address),
+                    make_string_telephone_number(readme_content.telephone_number),
+                    make_string_linkedin_url(readme_content.linkedin_url)
                     )
     final_string = "".join(content_tuple)
     print(final_string)
