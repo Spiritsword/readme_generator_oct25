@@ -37,12 +37,10 @@ def content_input():
     return ReadmeContent(title, description, installation_instructions, usage_information, licence, author_first_name, author_last_name, email_address, telephone_number, linkedin_url)
 
 def get_instructions():
-        i = 1
-        step_instructions = []
+        instructions = []
         while True:
             instruction = inquirer.text(message="Enter installation instructions next step (or 'n' for no more steps):").execute()
             print(instruction)
             if ((instruction == "n") or (instruction == "N")):
-                return "".join(step_instructions)
-            step_instructions.append(f'- Step {i}: {instruction} \n')
-            i += 1
+                return instructions
+            instructions.append(instruction)

@@ -17,7 +17,7 @@ def create_readme(readme_content):
 def make_string_base_section(title, description):
     if (description == "n" or description == "N"):
         return ""
-    return_string = f'\n ## {title} \n > {description} \n '
+    return_string = f'\n ## {title} \n {description} \n '
     print(return_string)
     return return_string
 
@@ -35,10 +35,13 @@ def make_string_title(title):
     return (f'\n # {title} \n')
 
 def make_string_description(description):
-    return make_string_para(description)
+    return make_string_para(f'> description)
 
 def make_string_installation_instructions(instructions):
-    return make_string_base_section("Installation Instructions", instructions)
+    formatted_instructions = []
+    for i in range (len(instructions)):
+        formatted_instructions.append((f'> - Step {i+1}: {instructions[i]} \n'))
+    return make_string_base_section("Installation Instructions", "".join(formatted_instructions))
 
 def make_string_usage_information(info):
     return make_string_base_section("Usage Information", info)
