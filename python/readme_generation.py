@@ -27,12 +27,12 @@ def make_string_para(para):
     return f'{para} '
 
 def make_string_hr():
-    return f'\n *** \n '
+    return (f'\n *** \n ')
 
 def make_string_title(title):
     if (title == "n" or title == "N"):
         return ""
-    return f'\n # {title} \n'
+    return (f'\n # {title} \n')
 
 def make_string_description(description):
     return make_string_para(description)

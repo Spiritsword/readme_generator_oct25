@@ -18,12 +18,7 @@ class ReadmeContent:
 def content_input():
     title = inquirer.text(message="Enter project title:").execute()
     description = inquirer.text(message="Enter project description:").execute()
-    step_instructions = y
-    i = 0
-    while ((step_instructions[i-1] != "n") and (step_instructions[i-1] != "N")):
-        step_instructions[i] = f'- Step {i}: {inquirer.text(message="Enter installation instructions next step (or \'n\' for no more steps):").execute()} \n'
-        i += i
-    installation_instructions = "".join(step_instructions)
+    installation_instructions = get_instructions()
     usage_information = inquirer.text(message="Enter usage information:").execute()
     licence = inquirer.select(message="Select a licence:",
         choices=[
@@ -40,3 +35,14 @@ def content_input():
     linkedin_url = inquirer.text(message="Enter your LinkedIn url:").execute()
 
     return ReadmeContent(title, description, installation_instructions, usage_information, licence, author_first_name, author_last_name, email_address, telephone_number, linkedin_url)
+
+def get_instructions():
+        i = 1
+        step_instructions = []
+        while True:
+            instruction = inquirer.text(message="Enter installation instructions next step (or 'n' for no more steps):").execute()
+            print(instruction)
+            if ((instruction == "n") or (instruction == "N")):
+                return "".join(step_instructions)
+            step_instructions.append(f'- Step {i}: {instruction} \n')
+            i += 1
