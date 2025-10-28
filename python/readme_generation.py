@@ -17,7 +17,7 @@ def create_readme(readme_content):
 def make_string_base_section(title, description):
     if (description == "n" or description == "N"):
         return ""
-    return_string = f'## {title} \n > {description} \n '
+    return_string = f'\n ## {title} \n > {description} \n '
     print(return_string)
     return return_string
 
@@ -32,7 +32,7 @@ def make_string_hr():
 def make_string_title(title):
     if (title == "n" or title == "N"):
         return ""
-    return f'# {title} \n'
+    return f'\n # {title} \n'
 
 def make_string_description(description):
     return make_string_para(description)
@@ -49,7 +49,7 @@ def make_string_licence(licence):
 def make_string_author(first_name, last_name):
     if ((first_name == "n" or first_name == "N") and (last_name == "n" or last_name == "N")):
         return ""
-    return f'## Author \n {first_name} {last_name} \n'
+    return f'\n ## Author \n {first_name} {last_name} \n'
 
 def make_string_email_address(email):
     return make_string_base_section("Email Address", email)
