@@ -39,8 +39,8 @@ def content_input():
 def get_instructions():
         instructions = []
         while True:
-            instruction = inquirer.text(message="Enter installation instructions next step (or 'n' for no more steps):").execute()
+            instruction = inquirer.text(message="Enter installation instructions next step (or just press 'enter' for no more steps):").execute()
             print(instruction)
-            if ((instruction == "n") or (instruction == "N")):
+            if (instruction == ""):
                 return instructions
             instructions.append(instruction)
