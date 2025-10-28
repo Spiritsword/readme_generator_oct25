@@ -18,7 +18,12 @@ class ReadmeContent:
 def content_input():
     title = inquirer.text(message="Enter project title:").execute()
     description = inquirer.text(message="Enter project description:").execute()
-    installation_instructions = inquirer.text(message="Enter installation instructions:").execute()
+    step_instructions = y
+    i = 0
+    while ((step_instructions[i-1] != "n") and (step_instructions[i-1] != "N")):
+        step_instructions[i] = f'- Step {i}: {inquirer.text(message="Enter installation instructions next step (or \'n\' for no more steps):").execute()} \n'
+        i += i
+    installation_instructions = "".join(step_instructions)
     usage_information = inquirer.text(message="Enter usage information:").execute()
     licence = inquirer.select(message="Select a licence:",
         choices=[
