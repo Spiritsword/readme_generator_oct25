@@ -47,7 +47,7 @@ class ReadmeContent:
 def content_input():
     """ Creates a readme content object, containing the input content required by a readme file.
         Gathers information from the user, via the terminal, in order to achieve this.
-        Required inputs are title and description, email_address and telephone_number. Other inputs are optional.
+        Required inputs are title and description, licence, email_address and telephone_number. Other inputs are optional.
         
         Args: (None)
 
