@@ -41,10 +41,13 @@ class ReadmeContent:
 
 #TOP-LEVEL FUNCTION FOR CONTENT MODULE
 
+
+
+
 def content_input():
     """ Creates a readme content object, containing the input content required by a readme file.
         Gathers information from the user, via the terminal, in order to achieve this.
-        Required inputs are title and description. Other inputs are optional.
+        Required inputs are title and description, email_address and telephone_number. Other inputs are optional.
         
         Args: (None)
 
@@ -71,8 +74,8 @@ def content_input():
         ).execute()
     author_first_name = inquirer.text(message="Enter your first name:").execute()
     author_last_name = inquirer.text(message="Enter your last name:").execute()
-    email_address = inquirer.text(message="Enter your email address:", validate = (lambda text: (True if ("@" in text) or text == "" else False)), invalid_message="Please enter a valid email address.").execute()
-    telephone_number = inquirer.text(message="Enter your telephone number:", validate = '''(lambda text: True if (text == "") else apply'''(NumberValidator(float_allowed = False)''', text)''', invalid_message = "Please input an integer without spaces.").execute()
+    email_address = inquirer.text(message="Enter your email address:", validate = (lambda text: (True if ("@" in text) else False)), invalid_message="Please enter a valid email address.").execute()
+    telephone_number = inquirer.text(message="Enter your telephone number:", validate = NumberValidator(float_allowed = False), invalid_message = "Please input an integer without spaces.").execute()
     linkedin_url = inquirer.text(message="Enter your LinkedIn url:").execute()
 
     return ReadmeContent(title, description, installation_instructions, usage_information, licence, author_first_name, author_last_name, email_address, telephone_number, linkedin_url)
