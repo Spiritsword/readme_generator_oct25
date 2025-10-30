@@ -95,7 +95,7 @@ def make_string_description(description):
             (str): marked up project description
 
     """
-    return make_string_para(f'> description')
+    return make_string_para(f'> {description}')
 
 def make_string_installation_instructions(instructions):
     """ Creates the marked-up installation instructions. 
