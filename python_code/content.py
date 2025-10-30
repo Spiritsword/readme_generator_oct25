@@ -41,9 +41,6 @@ class ReadmeContent:
 
 #TOP-LEVEL FUNCTION FOR CONTENT MODULE
 
-
-
-
 def content_input():
     """ Creates a readme content object, containing the input content required by a readme file.
         Gathers information from the user, via the terminal, in order to achieve this.
@@ -54,7 +51,7 @@ def content_input():
         Returns:
             (object): object of type ReadmeContent
 
-        Raises:
+        Exception handling:
             required input empty raises error
             non-empty email_address not containing "@" raises error
             non-empty telephone_number that is not an integer raises error
