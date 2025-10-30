@@ -38,7 +38,7 @@ def make_string_base_section(heading, content, size="large"):
             (str): formatted heading and content of a section as a single string
 
     """
-    if (content == "n" or content == "N"):
+    if (content == ""):
         return ""
     return_string = f'\n ##{"" if size == "large" else "#"} {heading} \n {content} \n '
     print(return_string)
@@ -54,9 +54,9 @@ def make_string_para(para):
             (str): formatted paragraph
 
     """
-    if (para == "n" or para == "N"):
+    if (para == ""):
         return ""
-    return f'{para} '
+    return f'{para} \n'
 
 def make_string_hr():
     """ Creates a horizontal rule.
