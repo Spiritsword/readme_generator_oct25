@@ -16,7 +16,7 @@
  ## Licence
 None available currently
 
- ## GitHub repository link
+ ## GitHub Repository Link
 [Readme generator repository link](https://github.com/Spiritsword/readme_generator_oct25)
 
  ***
