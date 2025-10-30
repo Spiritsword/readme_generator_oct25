@@ -12,5 +12,5 @@ Submit project
 
 # Discussion
 
-Focus on simplest solution that meets the specification
+Focus on simplest solution that meets the specification.
 
