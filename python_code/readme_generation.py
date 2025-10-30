@@ -21,7 +21,6 @@ def create_readme(readme_content):
                     make_string_linkedin_url(readme_content.linkedin_url)
                     )
     final_string = "".join(content_tuple)
-    print(final_string)
     return final_string
 
 #HELPERS FOR GENERATING README (GENERAL)
