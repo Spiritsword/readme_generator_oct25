@@ -81,7 +81,7 @@ def make_string_title(title):
             (str): marked up project title
 
     """
-    if (title == "n" or title == "N"):
+    if (title == ""):
         return ""
     return (f'\n # {title} \n')
 
@@ -95,6 +95,8 @@ def make_string_description(description):
             (str): marked up project description
 
     """
+    if (description == ""):
+        return ""
     return make_string_para(f'> {description}')
 
 def make_string_installation_instructions(instructions):
@@ -147,7 +149,7 @@ def make_string_author(first_name, last_name):
             (str): marked up author full name (including heading)
 
     """
-    if ((first_name == "n" or first_name == "N") and (last_name == "n" or last_name == "N")):
+    if ((first_name == "") and (last_name == "")):
         return ""
     return f'\n ## Author \n {first_name} {last_name} \n'
 
@@ -185,6 +187,8 @@ def make_string_linkedin_url(url):
             (str): marked up author linkedin url (including heading)
 
     """
+    if (url == ""):
+        return ""
     link = f'[Profile link]({url})'
     return make_string_base_section("LinkedIn Profile", link, "small")
 
