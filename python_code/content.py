@@ -72,7 +72,7 @@ def content_input():
     author_first_name = inquirer.text(message="Enter your first name:").execute()
     author_last_name = inquirer.text(message="Enter your last name:").execute()
     email_address = inquirer.text(message="Enter your email address:", validate = (lambda text: (True if ("@" in text) or text == "" else False)), invalid_message="Please enter a valid email address.").execute()
-    telephone_number = inquirer.text(message="Enter your telephone number:", validate = (lambda text: True if (text == "") else NumberValidator(float_allowed = False)(text)), invalid_message = "Please input an integer without spaces.").execute()
+    telephone_number = inquirer.text(message="Enter your telephone number:", validate = '''(lambda text: True if (text == "") else apply'''(NumberValidator(float_allowed = False)''', text)''', invalid_message = "Please input an integer without spaces.").execute()
     linkedin_url = inquirer.text(message="Enter your LinkedIn url:").execute()
 
     return ReadmeContent(title, description, installation_instructions, usage_information, licence, author_first_name, author_last_name, email_address, telephone_number, linkedin_url)
